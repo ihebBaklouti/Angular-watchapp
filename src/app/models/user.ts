@@ -4,9 +4,9 @@ export class User {
        public fName:string,
        public lName:string,
        public email:string,
-       public pwd:number,
-       public confirmPwd:number,
-       public tel:number,
+       public pwd:string,
+       public confirmPwd:string,
+       public tel:string,
        public adresse:string
     ){}
 }

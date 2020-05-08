@@ -1,0 +1,28 @@
+<caption>List of montres</caption>
+<app-search-watch></app-search-watch>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Marque</th>
+            <th scope="col">Description</th>
+            <th scope="col">Display</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let i of montres">
+        <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.name}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.marque}}</td>
+            <td>{{i.description}}</td>
+            <td><button type="button" class="btn btn-success" (click)='watchDisplay(i.id)'>Display</button></td>
+            <td><button type="button" class="btn btn-warning" (click)='editWatch(i.id)'>Edit</button></td>
+            <td><button type="button" class="btn btn-danger" (click)='deleteWatch(i)'>Delete</button></td>
+        </tr>
+    </tbody>
+</table>

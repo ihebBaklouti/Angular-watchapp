@@ -24,6 +24,18 @@ import { SigninComponent } from './components/signin/signin.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AddWatchComponent } from './components/add-watch/add-watch.component';
+import { UserService } from './services/user.service';
+import { DataService } from './services/data.service';
+import {InMemoryWebApiModule,HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { WatchComponent } from './components/watch/watch.component'
+import { MontreService } from './services/watch.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminWatchesComponent } from './components/admin-watches/admin-watches.component';
+import { DisplayWatchComponent } from './components/display-watch/display-watch.component';
+import { EditWatchComponent } from './components/edit-watch/edit-watch.component';
+import { SearchWatchComponent } from './components/search-watch/search-watch.component';
+
 
 
 
@@ -49,6 +61,12 @@ import { AddWatchComponent } from './components/add-watch/add-watch.component';
     AboutComponent,
     ContactComponent,
     AddWatchComponent,
+    WatchComponent,
+    AdminComponent,
+    AdminWatchesComponent,
+    DisplayWatchComponent,
+    EditWatchComponent,
+    SearchWatchComponent,
   
   ],
   //il faut vérifier la présence  de : AppRoutingModule (resposable navigation d'un component à un autre)
@@ -58,8 +76,11 @@ import { AddWatchComponent } from './components/add-watch/add-watch.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(DataService),
+    HttpClientInMemoryWebApiModule.forRoot(DataService),
   ],
-  providers: [],
+  providers: [MontreService ,UserService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

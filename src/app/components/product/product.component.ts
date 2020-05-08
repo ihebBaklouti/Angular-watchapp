@@ -11,12 +11,12 @@ montres: Montre[];
   constructor() { }
 
   ngOnInit(): void {
-    this.montres=[
+ /*    this.montres=[
       {id:1, price: 200,name:"watch", marque:"Swatch", image: "test",description:"Persistent"},
       {id:2, price: 300,name:"watch",marque:"Festina", image: "test",description:"Persistent"},
       {id:3, price: 400,name:"watch", marque:"Citizen", image: "test",description:"Persistent"},
       {id:4, price: 500,name:"watch", marque:"Rolex", image: "test",description:"Persistent"}
-    ]
+    ] */
   }
 
 }

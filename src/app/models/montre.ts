@@ -5,6 +5,7 @@ export class Montre {
        public name:string,
        public marque:string,
        public image:string,
+       public image2:string,
        public description:string
     ){}
 }
