@@ -13,15 +13,15 @@
             <th scope="col">Delete</th>
         </tr>
     </thead>
-    <tbody *ngFor="let i of montres">
+    <tbody *ngFor="let i of montres.watches">
         <tr>
-            <th scope="row">{{i.id}}</th>
+            <th scope="row">{{i._id}}</th>
             <td>{{i.name}}</td>
             <td>{{i.price}}</td>
             <td>{{i.marque}}</td>
             <td>{{i.description}}</td>
-            <td><button type="button" class="btn btn-success" (click)='watchDisplay(i.id)'>Display</button></td>
-            <td><button type="button" class="btn btn-warning" (click)='editWatch(i.id)'>Edit</button></td>
+            <td><button type="button" class="btn btn-success" (click)='watchDisplay(i._id)'>Display</button></td>
+            <td><button type="button" class="btn btn-warning" (click)='editWatch(i._id)'>Edit</button></td>
             <td><button type="button" class="btn btn-danger" (click)='deleteWatch(i)'>Delete</button></td>
         </tr>
     </tbody>

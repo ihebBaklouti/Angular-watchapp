@@ -9,7 +9,7 @@ import { Montre } from 'src/app/models/montre';
   styleUrls: ['./display-watch.component.css']
 })
 export class DisplayWatchComponent implements OnInit {
-id:number;
+id:string;
 watch : Montre;
   constructor(
     private watchService : MontreService,
@@ -17,7 +17,7 @@ watch : Montre;
   ) { }
 
   ngOnInit(): void {
-this.id= +this.activateRoute.snapshot.paramMap.get('id');
+this.id= this.activateRoute.snapshot.paramMap.get('id');
 console.log('this my id', this.id);
 this.watchService.displayMontre(this.id).subscribe(
   res => {

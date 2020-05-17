@@ -20,6 +20,9 @@
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
     "angular-in-memory-web-api": "^0.10.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.13",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -44,5 +47,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iheb-bak/Angular-watchapp.git"
+  },
+  "author": "Iheb Baklouti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iheb-bak/Angular-watchapp/issues"
+  },
+  "homepage": "https://github.com/iheb-bak/Angular-watchapp#readme"
 }

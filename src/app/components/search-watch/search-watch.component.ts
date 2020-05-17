@@ -38,13 +38,15 @@ export class SearchWatchComponent implements OnInit {
 	}
 
 	gotoDetail(montre: Montre): void {
-		let link = ['/montres', montre.id];
+		let link = ['/montres', montre._id];
 		this.router.navigate(link);
 	}
 
 	// Ajoute un terme de recherche dans le flux de l'Observable 'searchTerms'
 	search(term: string): void {
 		this.searchTerms.next(term);
+		console.log("My mark is ",term);
+		
 	}
 
 /* 	getColor(lunette) { (2)

@@ -25,8 +25,6 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AddWatchComponent } from './components/add-watch/add-watch.component';
 import { UserService } from './services/user.service';
-import { DataService } from './services/data.service';
-import {InMemoryWebApiModule,HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { WatchComponent } from './components/watch/watch.component'
 import { MontreService } from './services/watch.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -77,10 +75,8 @@ import { SearchWatchComponent } from './components/search-watch/search-watch.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    InMemoryWebApiModule.forRoot(DataService),
-    HttpClientInMemoryWebApiModule.forRoot(DataService),
   ],
-  providers: [MontreService ,UserService,DataService],
+  providers: [MontreService ,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,7 +8,7 @@ import { MontreService } from 'src/app/services/watch.service';
   styleUrls: ['./montre.component.css']
 })
 export class MontreComponent implements OnInit {
-montres:Montre[];
+montres:any;
   constructor(
     private montreService : MontreService
   ) { }

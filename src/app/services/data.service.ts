@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 import { Montre } from '../models/montre';
 import { User } from '../models/user';
@@ -32,3 +32,4 @@ export class DataService implements InMemoryDbService{
    }
  }
 
+ */

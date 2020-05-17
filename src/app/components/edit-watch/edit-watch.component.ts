@@ -10,7 +10,7 @@ import { MontreService } from 'src/app/services/watch.service';
 })
 export class EditWatchComponent implements OnInit {
   montre:Montre;
-  id:number;
+  id:string;
   constructor(
     private activateRoute : ActivatedRoute,
     private watchService : MontreService,
@@ -18,8 +18,8 @@ export class EditWatchComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id= +this.activateRoute.snapshot.paramMap.get('id');
-console.log('this my id', this.id);
+    this.id= this.activateRoute.snapshot.paramMap.get('id');
+console.log('this edit my id', this.id);
 this.watchService.displayMontre(this.id).subscribe(
   res => {
     this.montre=res;

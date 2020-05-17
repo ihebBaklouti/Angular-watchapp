@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-watches.component.css']
 })
 export class AdminWatchesComponent implements OnInit {
-  montres:Montre[];
+  montres:any;
   montre:Montre;
   term : any;
   /* id:number */
@@ -27,13 +27,14 @@ this.router.navigate([`montres/${id}`]);
 console.log("my id is",id);
   }
 
-  editWatch(id:number){
+  editWatch(id:string){
     this.router.navigate([`editwatch/${id}`]);
     console.log("my id is",id);
       }
 
   deleteWatch(montre:Montre){
     console.log("my watch is",montre);
+    console.log("my watch is",montre._id);
     /* this.id=montre.id; */
     this.montreService.deleteMontre(montre).subscribe(
       result =>    {
@@ -45,21 +46,11 @@ console.log("my id is",id);
 
   getAllMontres(){
     this.montreService.getMontres().subscribe(
-      res =>{
-        this.montres=res;
-        console.log("res is",res);
+      data =>{
+        this.montres=data;
+        console.log("data is",data);
       }
     )
   }
-
-  searchWatch(){
-    this.term=document.getElementById("search-input-montre").nodeValue;
-    this.montreService.searchMontre(this.term).subscribe(
-      res => {
-        console.log("res of search watchs is",res);
-        
-      }
-    )
-  }
-   
+  
 }
